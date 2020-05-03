@@ -8,7 +8,7 @@
 #X obj 701 138 inlet~;
 #X obj 701 160 /~ 44.1;
 #X text 496 118 carrier frequencey;
-#N canvas 0 23 785 480 feedbackLoop 0;
+#N canvas 0 23 785 480 feedbackLoop 1;
 #X obj 441 108 inlet~;
 #X obj 519 127 inlet~;
 #X text 497 107 modulation index;
@@ -33,12 +33,12 @@
 #X connect 0 0 2 0;
 #X connect 0 0 4 0;
 #X restore 456 197 pd delayWrite;
-#N canvas 0 22 450 300 delayRead 0;
+#N canvas 0 23 450 300 delayRead 1;
 #X obj 145 131 outlet~;
 #X obj 145 66 inlet~;
 #X obj 145 96 delread4~ \$0-feedbackDelay;
 #X text 135 48 delay time in milliseconds;
-#X obj 60 31 inlet~;
+#X obj 60 51 inlet~;
 #X text 8 12 dummy input for forcing correct execution order, f 27
 ;
 #X connect 1 0 2 0;
