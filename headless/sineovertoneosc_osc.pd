@@ -1,0 +1,26 @@
+#N canvas 651 400 450 300 10;
+#X obj 77 90 f \$1;
+#X text 37 19 fundamental;
+#X obj 77 68 loadbang;
+#X obj 77 112 + 1;
+#X text 108 90 sets multiplier to the number of this cloned abstraction
+;
+#X obj 62 176 osc~;
+#X obj 117 208 *~;
+#X obj 117 230 outlet~;
+#X text 118 19 amplification factor (0-1);
+#X obj 62 134 *~;
+#X obj 62 41 inlet~;
+#X obj 132 41 inlet;
+#X msg 132 142 \$1 20;
+#X obj 132 163 line~;
+#X connect 0 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 9 1;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 9 0 5 0;
+#X connect 10 0 9 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 6 1;
