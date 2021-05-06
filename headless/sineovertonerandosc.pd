@@ -1,0 +1,26 @@
+#N canvas 640 160 543 410 10;
+#X obj 111 346 outlet~;
+#X text 143 34 additive sine wave generator (limited to the overtone
+series);
+#X obj 300 185 inlet;
+#X text 47 143 set fundamental pitch;
+#X text 143 18 CLONABLE VERSION;
+#X text 247 160 takes a list of [overtone# overtoneAmp (;
+#X obj 111 303 *~;
+#X text 148 113 amplification factor;
+#X obj 111 165 inlet~;
+#X obj 192 134 inlet~;
+#X text 143 64 creation argument \$1 sets the number of overtones;
+#X text 143 84 uses the 'randosc' variant instead of osc~;
+#X obj 111 261 clone sineovertonerandosc_osc \$1;
+#X obj 205 215 inlet;
+#X text 182 190 detune factor;
+#X msg 205 236 all \$1;
+#X connect 2 0 12 2;
+#X connect 6 0 0 0;
+#X connect 8 0 12 0;
+#X connect 9 0 6 1;
+#X connect 12 0 6 0;
+#X connect 13 0 15 0;
+#X connect 15 0 12 1;
+#X coords 0 410 1 409 210 170 0;
