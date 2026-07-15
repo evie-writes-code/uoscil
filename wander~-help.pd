@@ -1,11 +1,6 @@
 #N canvas 646 23 548 855 10;
 #X obj 21 18 uoscil/wander~;
 #X text 114 18 RANDOM WANDERING VALUE WITH GRAVITATIONAL PULL;
-#X text 18 48 Generates a wandering value between -1 and 1 \, tending
-towards 0 A weighted random chance is used to keep the value centred
-around 0 \; at 1 there is a 100% chance to go down \, at -1 100% chance
-to go up \; and at 0 there is a 50/50 chance to go either up or down.
-;
 #X text 18 128 There is an optional exponential scaling factor to the
 weighted chance (set on creation) \, i.e. the weights increase exponentially
 instead of linearly as the value approaches the extremes. Lower exponents
@@ -454,18 +449,23 @@ will make the value stick more to 0 and higher exponents the opposite.
 #X text 18 188 Velocity (maximum change per step) is set via a signal
 inlet. Defaults to 0 velocity without input.;
 #X text 27 596 exponent of 8 and velocity of 0.05;
-#X connect 7 0 6 0;
-#X connect 8 0 6 0;
-#X connect 9 0 8 0;
-#X connect 10 0 23 0;
-#X connect 11 0 12 0;
-#X connect 12 0 23 0;
-#X connect 13 0 9 0;
-#X connect 14 0 11 0;
-#X connect 16 0 22 0;
-#X connect 17 0 20 0;
-#X connect 19 0 17 0;
-#X connect 20 0 22 0;
-#X connect 24 0 13 0;
-#X connect 25 0 19 0;
-#X connect 26 0 14 0;
+#X text 18 48 Generates a wandering value between -1 and 1 \, tending
+towards 0 A weighted random chance is used to keep the value centred
+around 0 \; at 1 there is a 100% chance to go down \, at -1 100% chance
+to go up \; and at 0 there is a 50/50 chance to go either up or down.
+;
+#X connect 6 0 5 0;
+#X connect 7 0 5 0;
+#X connect 8 0 7 0;
+#X connect 9 0 22 0;
+#X connect 10 0 11 0;
+#X connect 11 0 22 0;
+#X connect 12 0 8 0;
+#X connect 13 0 10 0;
+#X connect 15 0 21 0;
+#X connect 16 0 19 0;
+#X connect 18 0 16 0;
+#X connect 19 0 21 0;
+#X connect 23 0 12 0;
+#X connect 24 0 18 0;
+#X connect 25 0 13 0;

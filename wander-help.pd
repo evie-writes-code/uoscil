@@ -1,5 +1,4 @@
 #N canvas 0 23 455 580 10;
-#X obj 21 18 uoscil/wander~;
 #X text 114 18 RANDOM WANDERING VALUE WITH GRAVITATIONAL PULL;
 #X text 18 48 Generates a wandering value between -1 and 1 \, tending
 towards 0 A weighted random chance is used to keep the value centred
@@ -23,22 +22,23 @@ the opposite.;
 1;
 #X obj 53 303 metro 100;
 #X obj 56 346 hsl 127 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7163 1;
-#X obj 53 423 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+-1 -1 5729 1;
+#X obj 53 423 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 53 443 metro 100;
 #X obj 56 486 hsl 127 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9078 1;
+-1 -1 8789 1;
 #X floatatom 53 366 5 0 0 0 - - -, f 5;
 #X floatatom 53 506 5 0 0 0 - - -, f 5;
 #X msg 170 303 0.2;
 #X text 205 303 set velocity to 0.2;
-#X connect 8 0 12 0;
-#X connect 9 0 15 0;
-#X connect 10 0 11 0;
-#X connect 11 0 8 0;
-#X connect 12 0 16 0;
-#X connect 13 0 14 0;
-#X connect 14 0 9 0;
-#X connect 15 0 17 0;
-#X connect 18 0 8 1;
+#X obj 21 18 uoscil/wander;
+#X connect 7 0 11 0;
+#X connect 8 0 14 0;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;
+#X connect 11 0 15 0;
+#X connect 12 0 13 0;
+#X connect 13 0 8 0;
+#X connect 14 0 16 0;
+#X connect 17 0 7 1;
